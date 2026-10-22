@@ -315,8 +315,8 @@ h1{
 .projects-page{
     max-width: 900px;
     margin: 0 auto;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 .projects-page h1{
     font-family: "Syne", sans-serif;
@@ -548,7 +548,7 @@ h1{
  .menu-btn {
      display: none;
  }
-
+/*
  @media (max-width: 700px) {
      .header-content {
          position: relative;
@@ -595,4 +595,54 @@ h1{
          color: #fff;
          opacity: 1;
      }
- }
+         
+} */
+
+.sidebar a{
+    text-decoration: none;
+    width: 100%;
+}
+
+.sidebar li{
+    list-style: none;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    width: 100%;
+}
+
+.sidebar{
+   position: fixed;
+   top: 0px;
+   right:0px;
+   height: 100vh;
+   width: 250px;
+   backdrop-filter: blur(10px);
+   z-index: 999;
+   display: none;
+   flex-direction: column;
+   background-color: rgba(255, 255, 255, 0.25);
+   box-shadow: -10px 0px 10px rgba(0,0,0,0.1);
+   margin-top: 0px;
+   align-items: flex-start;
+   justify-content: flex-start;
+
+}
+
+.menu-button{
+    display: none;
+}
+
+@media(max-width:800px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+}
+
+@media(max-width:400px){
+    .sidebar{
+        width: 100%;
+    }
+}
