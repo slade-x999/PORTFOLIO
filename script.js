@@ -63,4 +63,5 @@ document.querySelectorAll(".sidebar a").forEach((link) => {
   link.addEventListener("click", hideSidebar);
 });
 
+window.addEventListener("pagehide", hideSidebar);
 window.addEventListener("pageshow", hideSidebar);
