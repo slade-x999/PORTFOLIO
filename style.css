@@ -8,6 +8,11 @@ body{
     color: #e6e8ee;
 }
 
+a,
+button{
+    -webkit-tap-highlight-color: transparent;
+}
+
 body::before{
     content: "";
     position:fixed;
@@ -497,110 +502,6 @@ h1{
 .contactsocials{
  margin-bottom: 35px;
 }
-/*
-@media screen and (min-width: 990px) {
-    .menu-btn{
-        display: none;
-    }
-}
-
-@media screen and (max-width:990px) {
-    .navbar a{
-        display: none;
-    }
-
-  .header-content {
-        position: relative;
-   }
-
-
-}
-
-.menu-btn {
-     display: block;
-     background: none;
-     border: none;
-     color: #fff;
-     font-size: 1.6rem;
-     cursor: pointer;
- }
-
- .nav-container {
-     display: none;
-     position: absolute;
-     top: 100%;
-     right: 0;
-     padding: 20px;
-     background: rgba(7, 11, 20, 0.95);
-     border: 1px solid rgba(255, 255, 255, 0.1);
-     border-radius: 12px;
-     z-index: 10;
- }
-
- .nav-container.open {
-     display: block;
- }
-
- .navbar {
-     display: flex;
-     flex-direction: column;
-     gap: 16px;
- } */
- 
-
- /* desktop: hamburger button hidden */
- .menu-btn {
-     display: none;
- }
-/*
- @media (max-width: 700px) {
-     .header-content {
-         position: relative;
-     }
-
-     .menu-btn {
-         display: block;
-         background: none;
-         border: none;
-         color: #fff;
-         font-size: 1.6rem;
-         cursor: pointer;
-     }
-
-     .nav-container {
-         display: none;
-         position: absolute;
-         top: 100%;
-         right: 0;
-         min-width: 180px;
-         padding: 20px;
-         background: #0b111c;
-         border: 1px solid rgba(255, 255, 255, 0.1);
-         border-radius: 12px;
-         z-index: 10;
-     }
-
-     .nav-container.open {
-         display: block;
-     }
-
-     .navbar {
-         display: flex;
-         flex-direction: column;
-         gap: 16px;
-         width: auto;
-         height: auto;
-         overflow: visible;
-     }
-
-     .nav-item,
-     .nav-item a {
-         display: block;
-         color: #fff;
-         opacity: 1;
-     }
-         
-} */
 
 .sidebar a{
     text-decoration: none;
