@@ -58,3 +58,9 @@ function hideSidebar() {
   sidebar.style.display = "none"; 
   document.body.style.overflow = "";
 }
+
+document.querySelectorAll(".sidebar a").forEach((link) => {
+  link.addEventListener("click", hideSidebar);
+});
+
+window.addEventListener("pageshow", hideSidebar);
