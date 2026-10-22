@@ -1,3 +1,26 @@
+
+
+function showSidebar() {
+  const sidebar = document.querySelector(".sidebar");
+  sidebar.style.display = "flex";
+  document.body.style.overflow = "hidden";
+}
+
+function hideSidebar() {
+  const sidebar = document.querySelector(".sidebar");
+  sidebar.style.display = "none"; 
+  document.body.style.overflow = "";
+}
+
+document.querySelectorAll(".sidebar a").forEach((link) => {
+  link.addEventListener("click", hideSidebar);
+});
+
+window.addEventListener("pagehide", hideSidebar);
+window.addEventListener("pageshow", hideSidebar);
+
+
+
 const items = document.querySelectorAll(".reveal");
 
 const observer = new IntersectionObserver((entries) => {
@@ -6,24 +29,13 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.2 });
 
-items.forEach((el) => observer.observe(el));
-
-const menuBtn = document.getElementById("menu-btn");
-const nav = document.getElementById("topnav");
-
-if (menuBtn && nav) {
-  menuBtn.addEventListener("click", () => {
-    console.log("clicked");
-    const open = nav.classList.toggle("open");
-    menuBtn.setAttribute("aria-expanded", open);
-  });
-}
+items.forEach((item) => observer.observe(item));
 
 
-
-
-const phrases = ["I'M DEE"];
 const el = document.getElementById("typed");
+
+if (el) {
+const phrases = ["I'M DEE"];
 let p = 0, i = 0, deleting = false;
 
 function tick() {
@@ -46,22 +58,5 @@ function tick() {
 }
 
 tick();
-
-function showSidebar() {
-  const sidebar = document.querySelector(".sidebar");
-  sidebar.style.display = "flex";
-  document.body.style.overflow = "hidden";
+  
 }
-
-function hideSidebar() {
-  const sidebar = document.querySelector(".sidebar");
-  sidebar.style.display = "none"; 
-  document.body.style.overflow = "";
-}
-
-document.querySelectorAll(".sidebar a").forEach((link) => {
-  link.addEventListener("click", hideSidebar);
-});
-
-window.addEventListener("pagehide", hideSidebar);
-window.addEventListener("pageshow", hideSidebar);
